@@ -1,54 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Responsive Web Page</title>
+	<title>Matcha Space | Ceremonial matcha, whisked to order</title>
+	<meta name="description" content="A small matcha bar built around a slower ritual. Stone-milled ceremonial matcha, iced lattes, smoothies, and matcha mille crepe.">
+	<meta name="theme-color" content="#f3eee2">
+	<meta property="og:title" content="Matcha Space | Ceremonial matcha, whisked to order">
+	<meta property="og:description" content="Stone-milled ceremonial matcha, poured with care. A slower kind of energy.">
+	<meta property="og:type" content="website">
+	<link rel="icon" href="assets/logo.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<nav class="">
-		<img src="logo.png" height="60">
-			<a href="#home">Home</a>
-			<a href="#about">About</a>
-			<a href="#gallery">Gallery</a>
-		</nav>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header" data-header>
+		<div class="shell header__inner">
+			<a class="brand" href="#home" aria-label="Matcha Space home">
+				<span class="brand__name">Matcha <em>Space</em></span>
+				<span class="brand__tag">Vitality in every sip</span>
+			</a>
+
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+				<span class="nav-toggle__label">Menu</span>
+				<span class="nav-toggle__icon" aria-hidden="true">
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+				<a href="#about">About</a>
+				<a href="#menu">Menu</a>
+				<a href="#ritual">Ritual</a>
+				<a class="button button--small" href="#visit">Visit</a>
+			</nav>
+		</div>
 	</header>
 
-	<section class="hero" id="home">
-		<h1>Discover the Beauty of Matcha</h1>
-		<p>A traditional Japanese green tea with modern appeal.</p>
-	</section>
-	<section class="container" id="about">
-		<div class="card">
-			<h3>What is Matcha?</h3>
-			<p>Matcha is a finely ground powder of specially grown green tea leaves, known for its vibrant color and health benefits.</p>
+	<main id="main">
+		<section class="hero" id="home" aria-labelledby="hero-title">
+			<div class="shell hero__grid">
+				<div class="hero__copy">
+					<p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Ceremonial matcha, stone-milled in small batches</p>
+					<h1 class="hero__title reveal" id="hero-title" style="--delay: 80ms">A slower kind of <em>energy.</em></h1>
+					<p class="hero__lede reveal" style="--delay: 160ms">Bright, vegetal, and quietly restorative. Every cup is sifted, whisked, and poured when you order it.</p>
+					<div class="hero__actions reveal" style="--delay: 240ms">
+						<a class="button" href="#menu">Explore the menu</a>
+						<a class="text-link" href="#about">Read our story <span aria-hidden="true">&rarr;</span></a>
+					</div>
+					<dl class="hero__stats reveal" style="--delay: 320ms">
+						<div>
+							<dt>Grade</dt>
+							<dd>Ceremonial</dd>
+						</div>
+						<div>
+							<dt>Milled</dt>
+							<dd>Stone, small batch</dd>
+						</div>
+						<div>
+							<dt>Served</dt>
+							<dd>Whisked to order</dd>
+						</div>
+					</dl>
+				</div>
+
+				<figure class="hero__media reveal" style="--delay: 180ms">
+					<div class="hero__frame">
+						<img src="assets/matcha-cake.jpg" alt="Matcha mille crepe with a slice removed, dusted with matcha and topped with raspberries" width="1000" height="1250" fetchpriority="high">
+					</div>
+					<div class="hero__stamp" aria-hidden="true">
+						<strong>Ceremonial</strong>
+						grade, stone-milled
+					</div>
+					<figcaption class="hero__caption">
+						<span>House favorite</span>
+						<span>Matcha mille crepe</span>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<div class="marquee" aria-hidden="true">
+			<div class="marquee__track">
+				<div class="marquee__group">
+					<span>Stone-milled</span><span class="marquee__sep">+</span>
+					<span>Ceremonial grade</span><span class="marquee__sep">+</span>
+					<span>Whisked to order</span><span class="marquee__sep">+</span>
+					<span>Small batch</span><span class="marquee__sep">+</span>
+				</div>
+				<div class="marquee__group">
+					<span>Stone-milled</span><span class="marquee__sep">+</span>
+					<span>Ceremonial grade</span><span class="marquee__sep">+</span>
+					<span>Whisked to order</span><span class="marquee__sep">+</span>
+					<span>Small batch</span><span class="marquee__sep">+</span>
+				</div>
+			</div>
 		</div>
 
-		<div class="card">
-			<h3>Health Benefits</h3>
-			<p>Rich in antioxidants, matcha boosts metabolism, enhances focus, and promotes relaxation.</p>
-		</div>
+		<section class="section about" id="about" aria-labelledby="about-title">
+			<div class="shell">
+				<div class="section__head">
+					<div class="reveal">
+						<p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>01 / About</p>
+						<h2 id="about-title">Not just green.<br><em>A ritual.</em></h2>
+					</div>
+					<p class="section__intro reveal" style="--delay: 100ms">Matcha is shade-grown tea, stone-milled into a fine powder. You drink the whole leaf, which is why it tastes deeper and feels calmer than a steeped cup.</p>
+				</div>
 
-		<div class="card">
-			<h3>How to Enjoy</h3>
-			<p>Enjoy matcha as tea, latte, desserts, or even in smoothies for a healthy lifestyle.</p>
-		</div>
-	</section>
+				<div class="about__grid">
+					<article class="about__item reveal">
+						<span class="about__num">01</span>
+						<h3>What is matcha?</h3>
+						<p>Tencha leaves are shaded before harvest, then ground slowly between granite stones. The result is a powder fine enough to suspend in water.</p>
+					</article>
+					<article class="about__item reveal" style="--delay: 100ms">
+						<span class="about__num">02</span>
+						<h3>Why it feels different</h3>
+						<p>Matcha carries caffeine and L-theanine together. The pairing gives a steadier lift than coffee, without the sharp drop that follows.</p>
+					</article>
+					<article class="about__item reveal" style="--delay: 200ms">
+						<span class="about__num">03</span>
+						<h3>How to enjoy it</h3>
+						<p>Whisk it with hot water for tea, pour it over milk and ice, or fold it into desserts and smoothies. There is no wrong way to slow down.</p>
+					</article>
+				</div>
+			</div>
+		</section>
 
-	<section class="container" id="gallery">
-		<div class="gallery">
-			<img src="Matcha_latte.png">
-			<p>Matcha Latte</p><br>
-			<img src="Matcha_smoothie.png">
-			<p>Matcha Smoothie</p></br>
-			<img src="Matcha_cake.png">
-			<p>Matcha Cake</p></br>
+		<section class="section menu" id="menu" aria-labelledby="menu-title">
+			<div class="shell">
+				<div class="section__head">
+					<div class="reveal">
+						<p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>02 / Menu</p>
+						<h2 id="menu-title">Three ways<br>to <em>slow down.</em></h2>
+					</div>
+					<p class="section__intro reveal" style="--delay: 100ms">A short menu, made properly. Ask about seasonal specials and oat milk.</p>
+				</div>
+
+				<div class="menu__grid">
+					<article class="product reveal">
+						<div class="product__media">
+							<img src="assets/matcha-latte.jpg" alt="Iced matcha latte in a clear cup, layered bright green over milk" width="900" height="1125" loading="lazy" decoding="async">
+							<span class="product__tag">Signature</span>
+						</div>
+						<div class="product__body">
+							<div class="product__row">
+								<h3>Iced Matcha Latte</h3>
+								<span class="product__meta">Iced</span>
+							</div>
+							<p>Ceremonial matcha, cold milk, and a whisper of vanilla. Bright at the top, creamy at the bottom.</p>
+						</div>
+					</article>
+
+					<article class="product reveal" style="--delay: 100ms">
+						<div class="product__media">
+							<img src="assets/matcha-smoothie.jpg" alt="Matcha smoothie in a glass topped with whipped cream and a dusting of matcha" width="900" height="1125" loading="lazy" decoding="async">
+							<span class="product__tag">Blended</span>
+						</div>
+						<div class="product__body">
+							<div class="product__row">
+								<h3>Matcha Smoothie</h3>
+								<span class="product__meta">Cold</span>
+							</div>
+							<p>Matcha, banana, oat milk, and a handful of ice. Green enough to count as breakfast.</p>
+						</div>
+					</article>
+
+					<article class="product reveal" style="--delay: 200ms">
+						<div class="product__media">
+							<img src="assets/matcha-cake.jpg" alt="Matcha mille crepe topped with raspberries and fresh mint" width="1000" height="1250" loading="lazy" decoding="async">
+							<span class="product__tag">Bakery</span>
+						</div>
+						<div class="product__body">
+							<div class="product__row">
+								<h3>Matcha Mille Crepe</h3>
+								<span class="product__meta">Slice</span>
+							</div>
+							<p>Paper-thin layers, lightly sweet cream, and a generous dusting of matcha. Best with a hot cup beside it.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section ritual" id="ritual" aria-labelledby="ritual-title">
+			<span class="ritual__mark" aria-hidden="true">03</span>
+			<div class="shell ritual__grid">
+				<div class="ritual__intro reveal">
+					<p class="eyebrow eyebrow--light"><span class="eyebrow__dot" aria-hidden="true"></span>03 / The ritual</p>
+					<h2 id="ritual-title">Sift. Whisk. Pour.<br><em>Then wait.</em></h2>
+					<p>Making matcha is less about speed and more about attention. Three small steps, a few quiet minutes, a better cup.</p>
+				</div>
+
+				<ol class="ritual__steps">
+					<li class="reveal">
+						<span class="step__num">01</span>
+						<div>
+							<h3>Sift</h3>
+							<p>Press the powder through a fine sieve. Clumps sink to the bottom; sifted matcha suspends evenly.</p>
+						</div>
+					</li>
+					<li class="reveal" style="--delay: 100ms">
+						<span class="step__num">02</span>
+						<div>
+							<h3>Whisk</h3>
+							<p>Add hot water and whisk in a W motion with a chasen until a soft, persistent foam forms.</p>
+						</div>
+					</li>
+					<li class="reveal" style="--delay: 200ms">
+						<span class="step__num">03</span>
+						<div>
+							<h3>Pour</h3>
+							<p>Drink it warm as tea, or pour it over milk and ice. Either way, let the first sip be slow.</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="section visit" id="visit" aria-labelledby="visit-title">
+			<div class="shell visit__inner">
+				<p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>04 / Visit</p>
+				<h2 id="visit-title" class="reveal" style="--delay: 80ms">Good tea. Good company.<br><em>No rush.</em></h2>
+				<p class="reveal" style="--delay: 160ms">Come for a cup, stay for a slice. We are here for the long conversations and the quiet ones.</p>
+				<div class="visit__actions reveal" style="--delay: 240ms">
+					<a class="button" href="#menu">See the menu</a>
+					<a class="text-link" href="#home">Back to top <span aria-hidden="true">&uarr;</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="shell">
+			<div class="footer__top">
+				<a class="footer__brand" href="#home" aria-label="Matcha Space home">
+					<img src="assets/logo.png" alt="Matcha Tea logo with the line Vitality in every sip" width="435" height="346" loading="lazy">
+				</a>
+				<nav class="footer__nav" aria-label="Footer">
+					<a href="#about">About</a>
+					<a href="#menu">Menu</a>
+					<a href="#ritual">Ritual</a>
+					<a href="#visit">Visit</a>
+				</nav>
+			</div>
+			<div class="footer__bottom">
+				<p>&copy; 2026 Matcha Space. All rights reserved.</p>
+				<p>Designed by Panimdim Trixie V.</p>
+			</div>
 		</div>
-	</section>
-<footer id="contact">
-	<p>© 2026 Matcha Space | Panimdim Trixie V. </p>
-</footer>
+	</footer>
+
+	<script src="script.js" defer></script>
 </body>
 </html>
